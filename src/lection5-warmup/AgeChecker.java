@@ -1,18 +1,16 @@
+import java.util.Scanner;
+
 public class AgeChecker {
-
-    public static String checkAge(int age) {
+    public static void  main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть свій вік:");
+        int age = new Scanner(System.in).nextInt();
         if (age >= 18) {
-            return "Ви доросла особа";
+            System.out.println("Ви доросла особа");
         } else {
-            return "Ви не є дорослою особою";
+            System.out.println("Ви не є дорослою особою");
         }
+        scanner.close();
     }
-
-    public static void main(String[] args) {
-        System.out.println(checkAge(18));
-        System.out.println(checkAge(0));
-        System.out.println(checkAge(99));
-    }
-
 }
 
