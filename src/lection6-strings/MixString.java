@@ -18,4 +18,5 @@ public class MixString {
         System.out.println(mixString("Hi", "There"));
         System.out.println(mixString("xxxx", "There"));
     }
+
 }
