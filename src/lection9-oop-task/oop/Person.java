@@ -1,15 +1,15 @@
 package oop;
 
-public class Person {
+public abstract class Person implements Displayable {
 
     private String name;
     private Integer age;
-    private String profession;
+    private PersonRole role;
 
-    public Person(String name, Integer age, String profession) {
+    public Person(String name, int age, PersonRole role) {
         this.name = name;
         this.age = age;
-        this.profession = profession;
+        this.role = role;
     }
 
     public void setName(String name) {
@@ -20,33 +20,24 @@ public class Person {
         return name;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setProfession(String profession) {
-        this.profession = profession;
+    public void setRole(PersonRole role) {
+        this.role = role;
     }
 
-    public String getProfession() {
-        return profession;
+    public PersonRole getRole() {
+        return role;
     }
 
-
-    public void displayInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Profession: " + profession);
-        System.out.println("***");
+    @Override
+    public void displayInformation() {
+        System.out.println("Name: " + name + ", Age: " + age + ", Profession: " + role);
     }
-
-    public void changeProfession(String newProfession){
-        this.profession = newProfession;
-    }
-
-
 }

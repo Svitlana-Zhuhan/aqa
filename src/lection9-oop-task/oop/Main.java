@@ -5,22 +5,18 @@ import org.w3c.dom.ls.LSOutput;
 public class Main {
     public static void main(String[] args) {
 
-        Person person1 = new Person("John", 30, "Ingeneer");
-        Person person2 = new Person("Mary", 25, "Teacher");
-        Person person3 = new Person("Bob", 35, "Doctor");
-        Person person4 = new Person("Alice", 28, "Architect");
+        Woman mary = new Woman("Mary", 25, PersonRole.TEACHER);
+        Man john = new Man("John", 30, PersonRole.ENGINEER);
+        Man bob = new Man("Bob", 35, PersonRole.DOCTOR);
 
-        System.out.println("Personal information: ");
-        person1.displayInfo();
-        person2.displayInfo();
-        person3.displayInfo();
-        person4.displayInfo();
+        mary.displayInformation();
+        john.displayInformation();
+        bob.displayInformation();
 
-        System.out.println("Changed profession for: " + person4.getName());
-        person4.changeProfession("Designer");
+        Woman alice = new Woman("Alice", 28, PersonRole.ARTIST);
+        alice.displayInformation();
 
-        System.out.println("Updated info: ");
-        person4.displayInfo();
+        alice.setRole(PersonRole.OTHER);
+        alice.displayInformation();
     }
-
 }
