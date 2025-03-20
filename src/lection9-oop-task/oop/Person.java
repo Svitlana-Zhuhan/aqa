@@ -3,7 +3,7 @@ package oop;
 public abstract class Person implements Displayable {
 
     private String name;
-    private Integer age;
+    private int age;
     private PersonRole role;
 
     public Person(String name, int age, PersonRole role) {
@@ -37,7 +37,11 @@ public abstract class Person implements Displayable {
     }
 
     @Override
-    public void displayInformation() {
-        System.out.println("Name: " + name + ", Age: " + age + ", Profession: " + role);
+    public abstract void displayInformation();
+    public void displayInformation(String prefix) {
+        System.out.println(prefix + ": ");
+        displayInformation();
     }
+
+    public abstract String getGender();
 }

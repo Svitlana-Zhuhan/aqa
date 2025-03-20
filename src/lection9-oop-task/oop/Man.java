@@ -9,7 +9,11 @@ public class Man extends Person {
 
     @Override
     public void displayInformation() {
-        super.displayInformation();
-        System.out.println("Gender: " + Gender);
+        System.out.println("Name: " + getName() + ", Age:" + getAge() + ", Gender: " + getGender());
+    }
+
+    @Override
+    public String getGender() {
+        return Gender;
     }
 }
