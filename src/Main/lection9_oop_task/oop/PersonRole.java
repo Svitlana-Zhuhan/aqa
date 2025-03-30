@@ -1,4 +1,4 @@
-package oop;
+package lection9_oop_task.oop;
 
 public enum PersonRole {
     STUDENT,
